@@ -7,9 +7,9 @@
                     <div class="card-body">
                     <blockquote class="blockquote mb-0">
                         <p>MISIÓN | Somos la universidad que gestiona el conocimiento por nuestra
-                        contribución con el desarrollo científico, económico y social de El Salvador, enfocada 
-                        a satisfacer las necesidades de estudiantes, comunidades profesionales y empresas, 
-                        mediante la docencia, investigación y proyección social.</p>
+                            contribución con el desarrollo científico, económico y social de El Salvador, enfocada 
+                            a satisfacer las necesidades de estudiantes, comunidades profesionales y empresas, 
+                            mediante la docencia, investigación y proyección social.</p>
                         <footer class="blockquote-footer">Conocen nuestra
                         <cite title="Filosofía Institucional">Filosofía Institucional</cite></footer>
                         <a href="https://ugb.edu.sv/inicio/filosofia-institucional.html">Filosofía Institucional

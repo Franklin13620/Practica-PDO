@@ -7,8 +7,8 @@ include ('menu.php');
         <div class="col">
             <form action="" method="POST">
                 <input type="text" name="buscar" id="" value="">
-                <input type="submit" name="Enviar" id="" value="Enviar consulta">
-                <input type="button" name="Nuevo" id="" value="Registro nuevo" onClick="location.replace('pgGuardar.php')">
+                <input type="submit" class="btn btn-secondary active" name="Enviar" id="" value="Enviar consulta">
+                <input type="button" class="btn btn-secondary active" name="Nuevo" id="" value="Registro nuevo" onClick="location.replace('pgGuardar.php')">
                 <a href="inicio.php">Volver al menu principal</a>
             </form>
         </div>
@@ -17,7 +17,7 @@ include ('menu.php');
     if (isset($_POST["buscar"])){
         try {
             $dato = $_POST["buscar"];
-            $sql = $conn->query("select * from estudiantes where id like '%$dato%'");
+            $sql = $conn->query("select * from estudiantes where nombres like '%$dato%'");
             $row_count = $sql->rowCount();
             echo '<div id="caja1">
             <table>';
@@ -27,24 +27,23 @@ include ('menu.php');
             echo '<th>|Apellido|</th>';
             echo '<span class="badge badge-danger badge-pill">'.$row_count.' filas seleccionadas</span>';
     while ($row = $sql->fetch(PDO::FETCH_ASSOC)){
-            echo '<tr>';
-            echo '<td>|
-            <a href="pgModificar.php?id='.$row['id'].'"><img
-            src="./img/modificar.png" width="20"></a></td>';
-            echo '<td>|
-            <a href="pgEliminar.php?id='.$row['id'].'"><img
-            src="./img/eliminar.png" width="20"></a></td>';
-            echo '<td>'.$row['id'].'</td>';
-            echo '<td>'.$row['nombres'].'</td>';
-            echo '<td>'.$row['apellidos'].'</td>';
+        echo '<tr>';
+        echo '<td>|
+        <a href="pgModificar.php?id='.$row['id'].'"><img
+        src="./img/modificar.png" width="20"></a></td>';
+        echo '<td>|
+        <a href="pgEliminar.php?id='.$row['id'].'"><img
+        src="./img/eliminar.png" width="20"></a></td>';
+        echo '<td>'.$row['id'].'</td>';
+        echo '<td>'.$row['nombres'].'</td>';
+        echo '<td>'.$row['apellidos'].'</td>';
         }
         echo "</table>";
-    }
-    catch(PDOException $e){
+    } catch (PDOException $e){
         echo "Error ".$e->getMessage();
-    }
+        }
         $conn = null;
-}
+    }
 //include("newQuery.php");
 include ('piedepagina.php')
 ?>

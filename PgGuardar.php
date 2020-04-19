@@ -10,9 +10,9 @@
 <body>
 	<h3 class="h3-personalizado">Nuevo Registro</h3>
 		<form action="<?PHP echo $_SERVER['PHP_SELF'];?>" method="post">
-		<div class="form-group row">
-				<label for="inputText" class="col-sm-2 col-form-label">Codigo:</label>
-						<input type="text" class="form-control" name="id" placeholder="Introduce tu codigo..." required>
+			<div class="form-group row">
+				<label for="inputNumber" class="col-sm-2 col-form-label">Codigo:</label>
+						<input type="number" class="form-control" name="id" placeholder="Introduce tu codigo..." required>
 				</div>
 			<div class="form-group row">
 				<label for="inputText" class="col-sm-2 col-form-label">Nombre:</label>
@@ -22,10 +22,11 @@
 				<label for="inputText" class="col-sm-2 col-form-label">Apellido:</label>
 					<input type="text" class="form-control" name="apellidos" placeholder="Introduce tu apellido..." required>
 			</div>
-		<center>
+			<center>
 			<input type="submit" class="btn btn-primary" name="Guardar" value="Guardar">
 			<input type="button" class="btn btn-primary" name="Enviar" id="" value="   Inicio   " onClick="location.replace('inicio.php')">
-		</center>
+			</center>
+		</form>
 	<script src="../js/jquery-3.4.1.slim.min.js" ></script>
     <script src="../js/popper.min.js" ></script>
     <script src="../js/bootstrap.min.js" ></script>
@@ -48,8 +49,7 @@ if(isset($_POST['id'])){
 		type="text/javascript">window.location="inicio.php";
 		</script>;
 		} ';*/
-	}
-	catch(PDOException $e){
+	}catch(PDOException $e){
 		$stmt->execute();
 		echo "Error: ".$e->getMessage();
 	}
