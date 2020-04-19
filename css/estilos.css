@@ -15,6 +15,9 @@ ul>li a:hover {
     background: rgba(200, 214, 215, 0.3);
     color: #93DFF4;
 }
+.h3-personalizado{
+    text-align: center;
+}
 .marco {
     height: 70px;
     background-color: rgb(0, 40, 81);

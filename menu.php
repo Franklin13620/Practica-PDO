@@ -3,7 +3,7 @@
     <div class="col">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Estudiantes</a>
+                <a class="nav-link active" href="inicio.php">Estudiantes</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Profesores</a>

@@ -21,17 +21,17 @@ include ('menu.php');
             $row_count = $sql->rowCount();
             echo '<div id="caja1">
             <table>';
-            echo '<th colspan="2" align="center">Opciones</th>';
-            echo '<th>Codigo</th>';
-            echo '<th>Nombre</th>';
-            echo '<th>Apellido</th>';
-            echo $row_count." filas seleccionadas";
+            echo '<th colspan="2" align="center">|Opciones</th>';
+            echo '<th>|Codigo</th>';
+            echo '<th>|Nombre</th>';
+            echo '<th>|Apellido|</th>';
+            echo '<span class="badge badge-danger badge-pill">'.$row_count.' filas seleccionadas</span>';
     while ($row = $sql->fetch(PDO::FETCH_ASSOC)){
             echo '<tr>';
-            echo '<td>
+            echo '<td>|
             <a href="pgModificar.php?id='.$row['id'].'"><img
             src="./img/modificar.png" width="20"></a></td>';
-            echo '<td>
+            echo '<td>|
             <a href="pgEliminar.php?id='.$row['id'].'"><img
             src="./img/eliminar.png" width="20"></a></td>';
             echo '<td>'.$row['id'].'</td>';
