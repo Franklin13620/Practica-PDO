@@ -1,0 +1,16 @@
+header {
+    margin-top: 30px;
+    background-image: url("../img/DesarrollosAMedida_Azul.png");
+    background-attachment: fixed;
+    height: 250px;
+   }
+.negro {
+    background-color: #9393F4;
+    }
+    ul>li a {
+    color: ivory;
+}
+ul>li a:hover {
+    background: rgba(200, 214, 215, 0.3);
+    color: #93DFF4;
+}
