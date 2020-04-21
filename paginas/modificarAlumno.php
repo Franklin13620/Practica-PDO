@@ -1,5 +1,5 @@
 <?php
-include ("conectar.php");
+require ("conectar.php");
     if(isset($_GET['id'])){
         try{
             $dato = $_GET['id'];

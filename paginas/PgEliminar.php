@@ -1,9 +1,8 @@
 <?php
-	include("conectar.php");
+	require ("conectar.php");
 	try
 	{
-		if($_GET)
-		{
+		if($_GET){
 			$id = $_GET['id'];
 			$stmt=$conn->prepare("delete from estudiantes where id=:id");
 			$stmt->bindValue(':id',$id,PDO::PARAM_STR);
@@ -12,8 +11,7 @@
 			echo "<script>location.replace('datosAlumno.php?id=".$id."')</script>";
 		}
 	}
-	catch(PDOException $e)
-	{
+	catch(PDOException $e){
 		echo "Error: ".$e->getMessage();
 	}
 	$conn = null;

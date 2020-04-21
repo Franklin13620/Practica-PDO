@@ -15,9 +15,6 @@ include "menu.php";
 </head>
 <body>
     <h2>Inicio de Sesión</h2>
-    
-    
-    
     <!-- Pie de página -->
     <?php include "piedepagina.php"; ?>
     </body>

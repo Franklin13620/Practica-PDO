@@ -1,6 +1,6 @@
 <?php
-	include ("conectar.php");
-	include ('cabecera.php');
+	require ("conectar.php");
+	include ("cabecera.php");
 	if(isset($_GET['id'])){
 		try{
 			$dato = $_GET['id'];

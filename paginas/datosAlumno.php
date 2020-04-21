@@ -31,9 +31,9 @@ include ("menu.php");
     while($row = $sql->fetch(PDO::FETCH_ASSOC)){
         echo '<tr>';
         echo '<td>
-        <a href="modificarAlumno.php?id='.$row['id'].'"><img src="img/modificar.png" width="20"></a></td>';
+        <a href="modificarAlumno.php?id='.$row['id'].'"><img src="../img/modificar.png" width="20"></a></td>';
         echo '<td>
-        <a href="pgEliminar.php?id='.$row['id'].'"><img src="img/eliminar.png" width="20"></a></td>';
+        <a href="pgEliminar.php?id='.$row['id'].'"><img src="../img/eliminar.png" width="20"></a></td>';
         echo '<td>'.$row['id'].'</td>';
         echo '<td>'.$row['nombres'].'</td>';
         echo '<td>'.$row['apellidos'].'</td>';

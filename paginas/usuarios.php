@@ -1,19 +1,18 @@
 <?php
-include ("conectar.php");
-include "cabecera.php";
-include "menu.php";
+require ("conectar.php");
+include ("cabecera.php");
+include ("menu.php");
+include ("aviso.php");
 ?>
 <!doctype html>
 <html lang="en">
 <head>
- <title>Diseño con Bootstrap</title>
  <script language = "JavaScript">
     function verificar(){
         pw1 = document.f1.passw.value;
         pw2 = document.f1.passw2.value;
-            // alert(pw1+" -- "+pw2);
             if(pw1!= pw2){
-            alert("Las contraseñas son diferentes");
+                $("#insertarAviso").modal();
                 document.f1.passw.value = "";
                 document.f1.passw2.value = "";
             }
@@ -23,7 +22,7 @@ include "menu.php";
 <body>
 <div class="row mt-3">
     <div class="col col-md-4">
-        <h3 class="h3-personalizado">
+        <h3>
             Mantenimiento de Usuarios y Contraseña
         </h3>
             <form  name="f1" action="" method="post">
@@ -78,11 +77,6 @@ include "menu.php";
     }
 ?>
 <!-- Pie de página -->
-<?php include "piedepagina.php"; ?>
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="../js/jquery-3.4.1.slim.min.js"></script>
-<script src="../js/popper.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+<?php include_once "piedepagina.php"; ?>
 </body>
 </html>

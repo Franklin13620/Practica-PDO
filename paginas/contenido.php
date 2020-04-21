@@ -1,14 +1,14 @@
 <?php
-include ('conectar.php');
-include ('cabecera.php');
-include ('menu.php');
+require ("conectar.php");
+include ("cabecera.php");
+include ("menu.php");
 ?>
 <section>
   <article>
     <div class="row mt-1">
         <div class="col col-md-3" >
             <div class="card" style="width: 16.5rem;">
-                <img src="img/estudiantes-1.jpg" class="card-img-top" alt="...">
+                <img src="../img/estudiantes-1.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Ingeniería en Sistemas
                     </h5>
@@ -25,7 +25,7 @@ include ('menu.php');
         </div>
         <div class="col col-md-3">
             <div class="card" style="width: 16.5rem;">
-                <img src="img/estudiantes-2.jpg" class="card-img-top" alt="...">
+                <img src="../img/estudiantes-2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Licenciatura en Idiomas</h5>
                             <p class="card-text">Podrán desempeñarse en las siguientes áreas de trabajo:
@@ -38,7 +38,7 @@ include ('menu.php');
         </div>
             <div class="col col-md-3">
                 <div class="card" style="width: 16.5rem;">
-                    <img src="img/estudiantes-3.jpg" class="card-img-top" alt="...">
+                    <img src="../img/estudiantes-3.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Ingeniería Civil</h5>
                             <p class="card-text">Director y administrador de su propia empresa de consultorías
@@ -50,7 +50,7 @@ include ('menu.php');
             </div>
         <div class="col col-md-3">
             <div class="card" style="width: 16.5rem;">
-                <img src="img/estudiantes-4.png" class="card-img-top" alt="...">
+                <img src="../img/estudiantes-4.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Licenciatura en Ciencias Jurídicas</h5>
                         <p class="card-text">Ejercer la Judicatura.Colaborador/a Jurídico/a y Secretario/a
@@ -79,15 +79,15 @@ include ('menu.php');
         <div class="col col-md-6" >
             <figure>
                 <h6>Video del Proyecto - Motivacional</h6>
-                <video style="width:500px; height:290px;" src="video/Video.mp4" type="video/mp4" 
-                    poster="img/video-proyecto.png" controls>
+                <video style="width:500px; height:290px;" src="../video/Video.mp4" type="video/mp4" 
+                    poster="../img/video-proyecto.png" controls>
                 </video>
             </figure>
         </div>
         <div class="col col-md-3" >
             <h6>Reproducción de audio: Mp3</h6>
             <figure>
-                <audio src="audio/HieloArdienteSeniora.mp3" controls ></audio>
+                <audio src="../audio/HieloArdienteSeniora.mp3" controls ></audio>
                     <figcaption>Canción: Hielo Ardiente Se&ntildeora</figcaption>
             </figure>
         </div>

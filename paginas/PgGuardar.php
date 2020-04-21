@@ -1,8 +1,8 @@
 <?php
-	include ('conectar.php');
-	include ('cabecera.php');
+	require ("conectar.php");
+	include ("cabecera.php");
 ?>
-<!-- Actigua pagina para guardar alumnos, pronto sera eliminada -->
+<!-- No se esta utilizando pagina para guardar alumnos, pronto sera eliminada -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,6 +46,7 @@ if(isset($_POST['id'])){
 		$stmt->execute();
 		echo $_POST['nombres']."  ".$_POST['apellidos']. " se ha a&ntilde;adido correctamente.";
 		echo "<center><div class='p-3 mb-2 bg-success text-white'>El nuevo registro se guardo exitosamente.</div></center>";
+		// Redireccionar a pagina de inicio despues de la insercion
 		/*echo '<script 
 		type="text/javascript">window.location="inicio.php";
 		</script>;
