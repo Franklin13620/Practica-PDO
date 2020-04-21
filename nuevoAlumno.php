@@ -11,17 +11,17 @@
                 <div class="modal-body">
                     <form action="" method="post">
                         <div class="form-group">
-                            <input type="number" class="form-control" name="id" placeholder="Ingresar codigo..." required>
+                            <input type="number" class="form-control" name="id" placeholder="Ingresar tu codigo..." required>
                         </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="nombres" placeholder="Ingresar nombre..." required>
+                    <input type="text" class="form-control" name="nombres" placeholder="Ingresar tu nombre..." required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="apellidos" placeholder="Ingresar apellido..." required>
+                    <input type="text" class="form-control" name="apellidos" placeholder="Ingresar tu apellido..." required>
                 </div>
                 <div class="form-group">
                 <!-- class="fa fa-angle-right" -->
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Registrar </button>
+                    <button type="submit" class="btn btn-secondary active mt-1"><i class="fa fa-save"></i> Registrar </button>
                 </div>
             </form>
         </div>

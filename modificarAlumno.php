@@ -17,7 +17,7 @@ include "cabecera.php";
 include "menu.php";
 ?>
     <!-- Aqui va el formulario -->
-    <button class="btn btn-primary mt-5" data-toggle="modal" data-target="#Modificar">Modificar Registro</button>
+    <button class="btn btn-secondary active mt-1" data-toggle="modal" data-target="#Modificar">Modificar Registro</button>
 <hr>
     <input type="button" class="btn btn-success" onclick="location.href='datosAlumno.php'" name="Volver" value="Volver a la consulta de datos">
 <!-- Aqui ponemos la ventana modal -->
@@ -26,7 +26,7 @@ include "menu.php";
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Agregar nuevo registro</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Modificar Datos</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -41,7 +41,7 @@ include "menu.php";
                     <div class="form-group">Apellido:<input type="text" class="form-control" name="apellidos" value="<?php echo (isset($row['apellidos']))?$row['apellidos']:''; ?>">
                     </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary"> Guardar el registro </button>
+                    <button type="submit" class="btn btn-secondary active"> Guardar el registro </button>
                 </div>
             </form>
         </div>

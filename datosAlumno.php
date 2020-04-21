@@ -5,8 +5,8 @@ include ("menu.php");
 ?>
     <div class="row">
         <div class="col">
-    <!—Este es el botón que carga la ventana modal -->
-        <button  class="btn btn-secondary active mt-5" data-toggle="modal" data-target="#insertarModal">Nuevo Registro</button>
+    <!--Este es el botón que carga la ventana modal -->
+        <button  class="btn btn-secondary active mt-1" data-toggle="modal" data-target="#insertarModal">Nuevo Registro</button>
     <hr>
         <form action="" method="POST">
             <input type="submit"  class="btn btn-secondary active" name="Enviar" id="" value="Consultar datos de estudiantes">
@@ -22,13 +22,12 @@ include ("menu.php");
             $dato = $_POST["buscar"];
             $sql = $conn->query("select * from estudiantes where id like '%$dato%'");
             $row_count = $sql->rowCount();
-            echo '<div id="caja1">
-            <table>';
+            echo '<span class="badge badge-danger badge-pill">'.$row_count.' filas seleccionadas</span>';
+            echo '<table class="table table-striped">';
             echo '<th colspan="2" align="center">Opciones</th>';
             echo '<th>Codigo</th>';
-            echo '<th>nombres</th>';
-            echo '<th>Apellidos</th>';
-            echo '<span class="badge badge-danger badge-pill">'.$row_count.' filas seleccionadas</span>';
+            echo '<th>Nombre</th>';
+            echo '<th>Apellido</th>';     
     while($row = $sql->fetch(PDO::FETCH_ASSOC)){
         echo '<tr>';
         echo '<td>

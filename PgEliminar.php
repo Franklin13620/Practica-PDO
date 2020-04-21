@@ -9,7 +9,7 @@
 			$stmt->bindValue(':id',$id,PDO::PARAM_STR);
 			$stmt->execute();
 			$row_count = $stmt->rowCount();
-			echo "<script>location.replace('inicio.php?id=".$id."')</script>";
+			echo "<script>location.replace('datosAlumno.php?id=".$id."')</script>";
 		}
 	}
 	catch(PDOException $e)

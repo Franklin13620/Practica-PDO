@@ -6,17 +6,11 @@ include "menu.php";
 <!doctype html>
 <html lang="en">
 <head>
- <!-- Required meta tags -->
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <!-- Bootstrap CSS -->
- <link rel="stylesheet" href="../css/bootstrap.min.css">
- <link rel="stylesheet" href="../css/estilos.css">
  <title>Diseño con Bootstrap</title>
  <script language = "JavaScript">
     function verificar(){
         pw1 = document.f1.passw.value;
-            pw2 = document.f1.passw2.value;
+        pw2 = document.f1.passw2.value;
             // alert(pw1+" -- "+pw2);
             if(pw1!= pw2){
             alert("Las contraseñas son diferentes");
@@ -29,7 +23,7 @@ include "menu.php";
 <body>
 <div class="row mt-3">
     <div class="col col-md-4">
-        <h3>
+        <h3 class="h3-personalizado">
             Mantenimiento de Usuarios y Contraseña
         </h3>
             <form  name="f1" action="" method="post">

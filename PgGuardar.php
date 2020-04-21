@@ -2,6 +2,7 @@
 	include ('conectar.php');
 	include ('cabecera.php');
 ?>
+<!-- Actigua pagina para guardar alumnos, pronto sera eliminada -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,8 +24,8 @@
 					<input type="text" class="form-control" name="apellidos" placeholder="Introduce tu apellido..." required>
 			</div>
 			<center>
-			<input type="submit" class="btn btn-primary" name="Guardar" value="Guardar">
-			<input type="button" class="btn btn-primary" name="Enviar" id="" value="   Inicio   " onClick="location.replace('inicio.php')">
+				<input type="submit" class="btn btn-primary" name="Guardar" value="Guardar">
+				<input type="button" class="btn btn-primary" name="Enviar" id="" value="   Inicio   " onClick="location.replace('inicio.php')">
 			</center>
 		</form>
 	<script src="../js/jquery-3.4.1.slim.min.js" ></script>

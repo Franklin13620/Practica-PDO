@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row" style="width: 103.4%;">
             <div class="col">
                 <header>
                     <img src="../img/banner.png" class="img-fluid" alt="">
