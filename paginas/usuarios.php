@@ -68,8 +68,11 @@ include ("aviso.php");
             $nombre_usuario = $_POST['nombre_usuario'];
             $nivel = $_POST['nivel'];
             $stmt->execute();
-            echo "<center><div class='p-3 mb-2 bg-success text-white'>El nuevo usuario registro se guardo exitosamente.</div></center>";
-
+            echo "<center>
+                    <div class='p-3 mb-2 bg-success text-white'>
+                        El nuevo usuario registro se guardo exitosamente.
+                    </div>
+                  </center>";
         }catch(PDOException $e){
             $stmt->execute();
             echo "Error: ".$e->getMessage();

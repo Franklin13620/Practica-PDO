@@ -20,8 +20,7 @@ include "menu.php";
     <button class="btn btn-secondary active mt-1" data-toggle="modal" data-target="#Modificar">Modificar Registro</button>
 <hr>
     <input type="button" class="btn btn-success" onclick="location.href='datosAlumno.php'" name="Volver" value="Volver a la consulta de datos">
-<!-- Aqui ponemos la ventana modal -->
-<!-- Modal -->
+    <!-- Modal -->
         <div class="modal fade" id="Modificar" tabindex="-1" role="dialog" arialabelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">

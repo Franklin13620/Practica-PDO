@@ -6,10 +6,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Guardar</title>
 </head>
 <body>
-	<h3 class="h3-personalizado">Nuevo Registro</h3>
+	<h3>Nuevo Registro</h3>
 		<form action="<?PHP echo $_SERVER['PHP_SELF'];?>" method="post">
 			<div class="form-group row">
 				<label for="inputNumber" class="col-sm-2 col-form-label">Codigo:</label>

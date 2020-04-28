@@ -1,7 +1,7 @@
 <?php
 include ("conectar.php");
-include "cabecera.php";
-include "menu.php";
+include ("cabecera.php");
+include ("menu.php");
 ?>
 <!doctype html>
 <html lang="en">

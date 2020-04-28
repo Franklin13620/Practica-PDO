@@ -10,7 +10,7 @@
         <a class="nav-link" href="datosAlumno.php">Estudiantes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Profesores</a>
+        <a class="nav-link" href="datosDocentes.php">Profesores</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Carreras</a>

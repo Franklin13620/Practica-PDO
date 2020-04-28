@@ -6,7 +6,7 @@ include ("menu.php");
     <div class="row">
         <div class="col">
     <!--Este es el botón que carga la ventana modal -->
-        <button  class="btn btn-secondary active mt-1" data-toggle="modal" data-target="#insertarModal">Nuevo Registro</button>
+        <button  class="btn btn-secondary active mt-1" data-toggle="modal" data-target="#insertarNuevoAlumno">Nuevo Alumno</button>
     <hr>
         <form action="" method="POST">
             <input type="submit"  class="btn btn-secondary active" name="Enviar" id="" value="Consultar datos de estudiantes">
@@ -48,6 +48,7 @@ include ("piedepagina.php");
     if(isset($_POST['id'])){
         try{
             echo $_POST['id']." ".$_POST['nombres']." ".$_POST['apellidos'];
+
             $stmt = $conn->prepare("INSERT INTO
             estudiantes(id,nombres,apellidos)VALUES(:id,:nombres,:apellidos)");
             $stmt->bindParam(':id',$id);
