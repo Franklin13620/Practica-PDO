@@ -1,18 +1,3 @@
-<?php
-  echo "
-  <script>
-      function limitarCaracter(element, numero_de_Caracter) {
-      var max_chars = numero_de_Caracter;
-      if(element.value.length > max_chars) {
-          element.value = element.value.substr(0, max_chars);
-      }
-  }
-    function Mayusculas(letra) {
-        letra.value = letra.value.toUpperCase();
-    }
-  </script>
-  ";
-?>
 <!-- Modal -->
 <div class="modal fade" id="insertarNuevoDoncente" tabindex="-1" role="dialog" arialabelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -29,17 +14,17 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="">Nombre</label>
-                            <input type="text" class="form-control" name="nombre_doc" placeholder="Nombre..." required>
+                            <input type="text" id="prueba" class="form-control" name="nombre_doc" placeholder="Nombre..." required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="">Apellido</label>
-                            <input type="text" class="form-control" name="apellido_doc" id="" placeholder="Apellido..." required>
+                            <input type="text" class="form-control" name="apellido_doc" onkeypress="PrimeraMayus(this);" placeholder="Apellido..." required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="">Codigo</label>
-                            <input type="text" class="form-control" name="id_doc" onkeypress="Mayusculas(this);" onkeydown="limitarCaracter(this,10);" onkeyup="limitarCaracter(this,10);" placeholder="Codigo..." required>
+                            <input type="text" class="form-control" name="id_doc" onkeypress="codigo_mayusculas(this);" onkeydown="limitarCaracter(this,10);" onkeyup="limitarCaracter(this,10);" placeholder="Codigo..." required>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputState">Profesion</label>

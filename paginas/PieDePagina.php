@@ -16,6 +16,17 @@
                         </a>
                     </blockquote>
                     </div>
+                    <!-- Obtener fecha -->
+                    <h5>
+                        <?php
+                        date_default_timezone_set('America/El_Salvador');
+                        setlocale(LC_ALL,'es_SV.UTF-8'); 
+                        $dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
+                        $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre",
+                        "Octubre","Noviembre","Diciembre");
+                        echo $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y')."</br> Hora actual: ".date('h:i A') ;                                
+                        ?>
+                    </h5>
                 </div>
                 </div>
             </div>
@@ -32,5 +43,6 @@
     <script src="../js/jquery-3.4.1.slim.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/funciones.js"></script>
     </body>
 </html>

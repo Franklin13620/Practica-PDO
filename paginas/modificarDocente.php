@@ -7,23 +7,22 @@ require ("conectar.php");
             $row_count = $sql->rowCount();
             if($row_count){
                 $row = $sql->fetch(PDO::FETCH_ASSOC);
+                // Para obtener el seleted 
+                $obtenerSelectd = $row['titulo_doc'];    
+                $obtenerSelectdGenero = $row['genero_doc'];
             }
         }catch(PDOException $e){
             echo "Error: ".$e->getMessage();
         }
         $conn = null;
-    }
-    //Solo 8 caracteres en numero de telefono
-    echo "
-    <script>
-        function limitarNumeroTelefono(element, numeroCaracter) {
-        var max_chars = numeroCaracter;
-        if(element.value.length > max_chars) {
-            element.value = element.value.substr(0, max_chars);
-        }
-    }
-    </script>
-    ";
+    } else {
+        echo '
+        <script type="text/javascript">
+            alert("Error con el docente que desea consultar.\nUsted sera redirecionado.");
+            window.location="datosDocentes.php";
+        </script>;
+     ';
+    } 
 include "cabecera.php";
 include "menu.php";
 ?>
@@ -33,8 +32,7 @@ include "menu.php";
     <!-- Aqui va el formulario -->
     <button class="btn btn-secondary active mt-1" data-toggle="modal" data-target="#Modificar">Modificar Docente</button>
 <hr>
-    <input type="button" class="btn btn-success" onclick="location.href='datosDocentes.php'" name="Volver" value="Volver a la consulta de datos">
-<!-- Aqui ponemos la ventana modal -->
+    <input type="button" class="btn btn-success" onclick="location.href='datosDocentes.php'" name="Volver" value="❮ Volver ">
 <!-- Modal -->
         <div class="modal fade" id="Modificar" tabindex="-1" role="dialog" arialabelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -49,7 +47,7 @@ include "menu.php";
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="">Nombre</label>
-                        <input type="text" class="form-control" name="nombre_doc"  value="<?php echo (isset($row['nombre_doc']))?$row['nombre_doc']:''; ?>" placeholder="Nombre..." required>
+                        <input type="text" class="form-control" name="nombre_doc" value="<?php echo (isset($row['nombre_doc']))?$row['nombre_doc']:''; ?>" placeholder="Nombre..." required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="">Apellido</label>
@@ -63,13 +61,6 @@ include "menu.php";
                              Tampoco hace insercion de id a base de datos por si logra cambiar el usuario el atributo disabled en inspecionar elemento-->
                         <input type="text" class="form-control"  name="id_doc" value="<?php echo (isset($row['id_doc']))?$row['id_doc']:''; ?>" disabled>
                     </div>
-                    <!-- Obtener Selected -->
-                    <?php 
-                        if(isset($row['id_doc'])) {
-                            $obtenerSelectd = $row['titulo_doc'];    
-                            $obtenerSelectdGenero = $row['genero_doc'];
-                        }      
-                    ?>
                     <div class="form-group col-md-5">
                         <label for="inputState">Profesion</label>
                         <select id="inputState" class="form-control" name="titulo_doc" required>
@@ -85,7 +76,7 @@ include "menu.php";
                     </div>
                     <div class="form-group col-md-3">
                         <label for="">Telefono</label>
-                        <input type="number" class="form-control" name="telefono_doc" onkeydown="limitarNumeroTelefono(this,8);" onkeyup="limitarNumeroTelefono(this,8);"
+                        <input type="number" class="form-control" name="telefono_doc" onkeydown="limitarCaracter(this,8);" onkeyup="limitarCaracter(this,8);"
                         value="<?php echo (isset($row['telefono_doc']))?$row['telefono_doc']:''; ?>" placeholder="Telefono..." required> 
                     </div>
                 </div>
@@ -108,7 +99,7 @@ include "menu.php";
                     </div>
                 </div>
                 <div class="form-group"> 
-                    <button type="submit" class="btn btn-secondary active mt-1"> Registrar </button>
+                    <button type="submit" class="btn btn-secondary active mt-1"> Modificar </button>
                     </div>
             </form>
             </div>
@@ -125,7 +116,7 @@ include "piedepagina.php";
 include ("conectar.php");
 if($_POST) {
     try {
-        if(isset($row['id_doc'])){
+        if(isset($_GET['id_doc'])){
             $sql = $conn->exec("UPDATE docentes SET nombre_doc='".$_POST['nombre_doc']."',apellido_doc='".$_POST['apellido_doc']."'
             ,titulo_doc='".$_POST['titulo_doc']."',telefono_doc='".$_POST['telefono_doc']."',direccion_doc='".$_POST['direccion_doc']."'
             ,ciudad_doc='".$_POST['ciudad_doc']."',genero_doc='".$_POST['genero_doc']."' WHERE id_doc='".$row['id_doc']." ' ");
