@@ -1,3 +1,18 @@
+<?php
+  echo "
+  <script>
+      function limitarCaracter(element, numero_de_Caracter) {
+      var max_chars = numero_de_Caracter;
+      if(element.value.length > max_chars) {
+          element.value = element.value.substr(0, max_chars);
+      }
+  }
+    function Mayusculas(letra) {
+        letra.value = letra.value.toUpperCase();
+    }
+  </script>
+  ";
+?>
 <!-- Modal -->
 <div class="modal fade" id="insertarNuevoDoncente" tabindex="-1" role="dialog" arialabelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -9,39 +24,64 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <!-- Nuevo form -->
                     <form action="" method="post">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="id_doc" placeholder="Codigo del docente..." required>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="">Nombre</label>
+                            <input type="text" class="form-control" name="nombre_doc" placeholder="Nombre..." required>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="nombre_doc" placeholder="Nombre del docente..." required>
+                        <div class="form-group col-md-6">
+                            <label for="">Apellido</label>
+                            <input type="text" class="form-control" name="apellido_doc" id="" placeholder="Apellido..." required>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="apellido_doc" placeholder="Apellido del docente..." required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="">Codigo</label>
+                            <input type="text" class="form-control" name="id_doc" onkeypress="Mayusculas(this);" onkeydown="limitarCaracter(this,10);" onkeyup="limitarCaracter(this,10);" placeholder="Codigo..." required>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="titulo_doc" placeholder="Titulo del docente..." required>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">Profesion</label>
+                            <select id="inputState" class="form-control" name="titulo_doc" required>
+                                <option value="">Selecione...</option>
+                                <option value="Ing. en Sistemas">Ing. Sistemas</option>
+                                <option value="Ing. Electrico">Ing. Electrico</option>
+                                <option value="Lic. en Medicina">Lic. en Medicina</option>
+                                <option value="Lic. en Administracion de Empresas">Lic. en Administración de Empresas</option>
+                                <option value="Lic. en Contaduria Publica">Lic. en Contaduría Pública</option>
+                                <option value="Lic en Matematicas">Lic en Matematicas</option>
+                                <option value="Lic en Idioma Ingles">Lic en Idioma Inglés</option>
+                            </select>
                         </div>
-                        <div class="form-group">
-                            <input type="text" id='form2' class="form-control" name="telefono_doc" placeholder="Telefono del docente..." required>
+                        <div class="form-group col-md-4">
+                            <label for="">Telefono</label>
+                            <input type="number" class="form-control" name="telefono_doc" onkeydown="limitarCaracter(this,8);" onkeyup="limitarCaracter(this,8);" placeholder="Telefono..." required> 
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="direccion_doc" placeholder="Direccion del docente..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Direccion</label>
+                        <input type="text" class="form-control" name="direccion_doc" placeholder="1234 San Miguel SM" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Ciudad</label>
+                            <input type="text" class="form-control" name="ciudad_doc" required>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="ciudad_doc" placeholder="Ciudad del docente..." required>
-                        </div>
-                        <select class="custom-select" name="genro" required>
-                            <option value="">-SELECIONE GENERO-</option>
+                    <div class="form-group col-md-6">
+                        <label for="inputState">Genero</label>
+                        <select id="inputState" class="form-control" name="genero_doc" required>
+                            <option value="">Selecione...</option>
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
                         </select>
-                        <div class="form-group">
-                        <!-- class="fa fa-angle-right" -->
-                            <button type="submit" class="btn btn-secondary active mt-1"><i class="fa fa-save"></i> Registrar </button>
                         </div>
-                </form>
-        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <button type="submit" class="btn btn-secondary active mt-1"> Registrar </button>
+                        </div>
+                    </form>
+        </div> 
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
         </div>
