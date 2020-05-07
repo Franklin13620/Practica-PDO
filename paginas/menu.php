@@ -1,5 +1,5 @@
 <!-- menu principal -->
-<nav class="navbar navbar-expand-lg navbar-light bg-lg" >
+<nav class="navbar navbar-expand-lg navbar-light bg-lg">
   <!-- Le quite la navbar-brand, porque no me gusto al centar las etiquetas ul -->
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav mx-auto">
@@ -13,7 +13,7 @@
         <a class="nav-link" href="datosDocentes.php">Profesores</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Carreras</a>
+        <a class="nav-link" href="#">Grados</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Materias</a>
@@ -22,8 +22,7 @@
         <a class="nav-link" href="#">Horarios</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" 
-          aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Usuarios
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

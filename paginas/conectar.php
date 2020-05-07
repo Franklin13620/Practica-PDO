@@ -11,4 +11,3 @@ try {
 	echo "ERROR: " . $e->getMessage();
 	die();
 }
-?>

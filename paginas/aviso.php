@@ -11,7 +11,7 @@
       <div class="modal-body">
         <h3>Las contraseñas no coinciden</h3>
         <p>Por favor intentelo de nuevo.</p>
-     </div>
+      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>

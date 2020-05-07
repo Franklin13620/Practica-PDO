@@ -1,20 +1,20 @@
 <!-- Modal -->
 <div class="modal fade" id="insertarNuevoDoncente" tabindex="-1" role="dialog" arialabelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar nuevo Docente</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Nuevo form -->
-                    <form action="" method="post">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar nuevo Docente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Nuevo form -->
+                <form action="" method="post">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="">Nombre</label>
-                            <input type="text" id="prueba" class="form-control" name="nombre_doc" placeholder="Nombre..." required>
+                            <input type="text" class="form-control" name="nombre_doc" placeholder="Nombre..." required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="">Apellido</label>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="">Telefono</label>
-                            <input type="number" class="form-control" name="telefono_doc" onkeydown="limitarCaracter(this,8);" onkeyup="limitarCaracter(this,8);" placeholder="Telefono..." required> 
+                            <input type="number" class="form-control" name="telefono_doc" onkeydown="limitarCaracter(this,8);" onkeyup="limitarCaracter(this,8);" placeholder="Telefono..." required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -53,23 +53,23 @@
                             <label for="inputCity">Ciudad</label>
                             <input type="text" class="form-control" name="ciudad_doc" required>
                         </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputState">Genero</label>
-                        <select id="inputState" class="form-control" name="genero_doc" required>
-                            <option value="">Selecione...</option>
-                            <option value="Masculino">Masculino</option>
-                            <option value="Femenino">Femenino</option>
-                        </select>
+                        <div class="form-group col-md-6">
+                            <label for="inputState">Genero</label>
+                            <select id="inputState" class="form-control" name="genero_doc" required>
+                                <option value="">Selecione...</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="form-group"> 
+                    <div class="form-group">
                         <button type="submit" class="btn btn-secondary active mt-1"> Registrar </button>
-                        </div>
-                    </form>
-        </div> 
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
         </div>
     </div>
- </div>
 </div>
